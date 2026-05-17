@@ -3,26 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <title>Fernando Daniel Diaz Araneda</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+/* Contenedor general */
+.contenedor {
+    display: flex;
+    gap: 40px;
+}
+
+/* Menu lateral */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botones simples */
+.menu button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid black;
+}
+
+/* Cuadro de descripción */
+.descripcion {
+    width: 400px;
+    min-height: 150px;
+    border: 1px solid black;
+    padding: 15px;
+}
+</style>
 </head>
 
 <body>
 
-<section class="hero">
+<h1>Fernando Daniel Diaz Araneda</h1>
 
-<h1 class="titulo">
-Fernando Daniel Diaz Araneda
-</h1>
+<div class="contenedor">
 
-<div class="boton">
-    <span class="texto">ChangoMas</span>
-
-    <div class="descripcion">
-        hola, esta es mi descripcion sobre mi puesto
+    <div class="menu">
+        <button onclick="mostrarDescripcion(1)">Botón 1</button>
+        <button onclick="mostrarDescripcion(2)">Botón 2</button>
+        <button onclick="mostrarDescripcion(3)">Botón 3</button>
     </div>
+
+    <div id="descripcion" class="descripcion">
+        Seleccioná un botón para ver la descripción
+    </div>
+
 </div>
 
-</section>
+<script>
+function mostrarDescripcion(numero) {
+
+    const cuadro = document.getElementById("descripcion");
+
+    if (numero === 1) {
+        cuadro.textContent = "Descripción 1";
+    }
+
+    if (numero === 2) {
+        cuadro.textContent = "Descripción 2";
+    }
+
+    if (numero === 3) {
+        cuadro.textContent = "Descripción 3";
+    }
+}
+</script>
 
 </body>
 </html>

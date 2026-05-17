@@ -1,4 +1,4 @@
-body{
+/*body{
 margin:0;
 height:100vh;
 display:flex;
@@ -19,7 +19,7 @@ margin-bottom:40px;
 }
 
 /* BOTON BASE */
-.boton{
+/*.boton{
 width:260px;
 padding:18px;
 border:2px solid #38bdf8;
@@ -31,7 +31,7 @@ background:#020617;
 }
 
 /* TEXTO PRINCIPAL */
-.texto{
+/*.texto{
 display:block;
 font-size:22px;
 font-weight:bold;
@@ -39,7 +39,7 @@ text-align:center;
 }
 
 /* DESCRIPCION OCULTA */
-.descripcion{
+/*.descripcion{
 opacity:0;
 max-height:0;
 margin-top:0;
@@ -48,14 +48,14 @@ color:#cbd5f5;
 }
 
 /* 🔥 HOVER — EL BOTON SE AGRANDA */
-.boton:hover{
+/*.boton:hover{
 background:#0f172a;
 box-shadow:0 0 20px #38bdf8;
 }
 
 /* SE EXPANDE HACIA ABAJO */
-.boton:hover .descripcion{
+/*.boton:hover .descripcion{
 opacity:1;
 max-height:150px;
 margin-top:15px;
-}
+}*/
