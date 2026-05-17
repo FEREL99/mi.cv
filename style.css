@@ -15,45 +15,47 @@ text-align:center;
 
 .titulo{
 font-size:40px;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
-/* BOTON */
-.boton-expandible{
+/* BOTON BASE */
+.boton{
 width:260px;
 padding:18px;
 border:2px solid #38bdf8;
 border-radius:12px;
-overflow:hidden;
 cursor:pointer;
-transition:0.4s;
+overflow:hidden;
+transition:all 0.4s ease;
 background:#020617;
 }
 
-/* TITULO */
-.boton-titulo{
+/* TEXTO PRINCIPAL */
+.texto{
+display:block;
 font-size:22px;
 font-weight:bold;
 text-align:center;
 }
 
 /* DESCRIPCION OCULTA */
-.boton-descripcion{
-margin-top:15px;
+.descripcion{
 opacity:0;
 max-height:0;
-transition:0.4s;
+margin-top:0;
+transition:all 0.4s ease;
 color:#cbd5f5;
 }
 
-/* 🔥 EFECTO EXPANSION */
-.boton-expandible:hover{
+/* 🔥 HOVER — EL BOTON SE AGRANDA */
+.boton:hover{
 background:#0f172a;
 box-shadow:0 0 20px #38bdf8;
 }
 
-/* SE AGRANDA HACIA ABAJO */
-.boton-expandible:hover .boton-descripcion{
+/* SE EXPANDE HACIA ABAJO */
+.boton:hover .descripcion{
 opacity:1;
 max-height:150px;
+margin-top:15px;
 }
