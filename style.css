@@ -1,0 +1,42 @@
+body{
+margin:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#0f172a;
+font-family:Arial, sans-serif;
+color:white;
+}
+
+/* Nombre */
+.titulo{
+margin-bottom:40px;
+}
+
+/* Contenedor */
+.contenedor{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* BOTON */
+.boton{
+text-decoration:none;
+color:white;
+font-size:22px;
+padding:20px 40px;
+border:2px solid #38bdf8;
+border-radius:12px;
+transition:0.3s;
+}
+
+/* 🔥 efecto hover */
+.boton:hover{
+background:#38bdf8;
+color:#020617;
+transform:scale(1.1);
+box-shadow:0 0 20px #38bdf8;
+}
