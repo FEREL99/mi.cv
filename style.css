@@ -15,52 +15,45 @@ text-align:center;
 
 .titulo{
 font-size:40px;
-margin-bottom:40px;
-}
-
-/* CONTENEDOR */
-.dropdown{
-position:relative;
-display:inline-block;
+margin-bottom:50px;
 }
 
 /* BOTON */
-.boton{
-padding:18px 45px;
+.boton-expandible{
+width:260px;
+padding:18px;
 border:2px solid #38bdf8;
 border-radius:12px;
+overflow:hidden;
 cursor:pointer;
-transition:0.3s;
+transition:0.4s;
+background:#020617;
 }
 
-.boton:hover{
-background:#38bdf8;
-color:#020617;
+/* TITULO */
+.boton-titulo{
+font-size:22px;
+font-weight:bold;
+text-align:center;
 }
 
-/* PANEL DESPLEGABLE */
-.descripcion{
-position:absolute;
-top:100%;
-left:0;
-width:260px;
-
-background:#0f172a;
-border:1px solid #38bdf8;
-border-radius:10px;
-padding:20px;
-margin-top:10px;
-
+/* DESCRIPCION OCULTA */
+.boton-descripcion{
+margin-top:15px;
 opacity:0;
-transform:translateY(-10px);
-pointer-events:none;
-
-transition:0.3s;
+max-height:0;
+transition:0.4s;
+color:#cbd5f5;
 }
 
-/* 🔥 HOVER */
-.dropdown:hover .descripcion{
+/* 🔥 EFECTO EXPANSION */
+.boton-expandible:hover{
+background:#0f172a;
+box-shadow:0 0 20px #38bdf8;
+}
+
+/* SE AGRANDA HACIA ABAJO */
+.boton-expandible:hover .boton-descripcion{
 opacity:1;
-transform:translateY(0);
-pointer-events:auto;
+max-height:150px;
 }
