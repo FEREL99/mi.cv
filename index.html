@@ -5,81 +5,168 @@
 <title>Fernando Daniel Diaz Araneda</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #2b2b2b;
+
+/* ---------- GENERAL ---------- */
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#2b2b2b;
+    color:white;
+    display:flex;
 }
 
-/* Contenedor general */
-.contenedor {
-    display: flex;
-    gap: 40px;
+/* ---------- MENU IZQUIERDO ---------- */
+
+.sidebar{
+    width:220px;
+    background:#1f1f1f;
+    height:100vh;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
-/* Menu lateral */
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.sidebar button{
+    background:white;
+    color:black;
+    border:none;
+    padding:12px;
+    cursor:pointer;
+    text-align:left;
 }
 
-/* Botones simples */
-.menu button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
+/* ---------- CONTENIDO ---------- */
+
+.contenido{
+    flex:1;
+    padding:40px;
 }
 
-/* Cuadro de descripción */
-.descripcion {
-    width: 400px;
-    min-height: 150px;
-    border: 1px solid black;
-    padding: 15px;
-    background-color: white;
+/* ---------- CAJA BLANCA ---------- */
+
+.caja{
+    background:white;
+    color:black;
+    padding:25px;
+    min-height:300px;
+    width:700px;
 }
+
+/* ---------- DISEÑO EXPERIENCIA ---------- */
+
+.contenedor-exp{
+    display:flex;
+    gap:40px;
+}
+
+.menu-exp{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.menu-exp button{
+    background:white;
+    color:black;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+}
+
+.descripcion-exp{
+    background:white;
+    color:black;
+    width:600px;
+    min-height:300px;
+    padding:20px;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>Fernando Daniel Diaz Araneda</h1>
+<!-- MENU LATERAL -->
+<div class="sidebar">
+    <button onclick="mostrar('uno')">Datos uno</button>
+    <button onclick="mostrar('dos')">Datos dos</button>
+    <button onclick="mostrar('tres')">Datos tres</button>
+    <button onclick="mostrar('experiencia')">Experiencia</button>
+</div>
 
-<div class="contenedor">
+<!-- CONTENIDO DINAMICO -->
+<div class="contenido" id="contenido">
 
-    <div class="menu">
-        <button onclick="mostrarDescripcion(1)">Botón 1</button>
-        <button onclick="mostrarDescripcion(2)">Botón 2</button>
-        <button onclick="mostrarDescripcion(3)">Botón 3</button>
-    </div>
-
-    <div id="descripcion" class="descripcion">
-        Seleccioná un botón para ver la descripción
-    </div>
+<div class="caja">
+Seleccioná una opción del menú.
+</div>
 
 </div>
 
 <script>
-function mostrarDescripcion(numero) {
 
-    const cuadro = document.getElementById("descripcion");
+/* CAMBIAR CONTENIDO PRINCIPAL */
+function mostrar(seccion){
 
-    if (numero === 1) {
-        cuadro.textContent = "Descripción 1";
-    }
+const contenedor = document.getElementById("contenido");
 
-    if (numero === 2) {
-        cuadro.textContent = "Descripción 2";
-    }
-
-    if (numero === 3) {
-        cuadro.textContent = "Descripción 3";
-    }
+if(seccion==="uno"){
+contenedor.innerHTML = `
+<div class="caja">
+<h2>Datos uno</h2>
+<p>Datos uno</p>
+</div>`;
 }
+
+if(seccion==="dos"){
+contenedor.innerHTML = `
+<div class="caja">
+<h2>Datos dos</h2>
+<p>Datos dos</p>
+</div>`;
+}
+
+if(seccion==="tres"){
+contenedor.innerHTML = `
+<div class="caja">
+<h2>Datos tres</h2>
+<p>Datos tres</p>
+</div>`;
+}
+
+/* SECCION EXPERIENCIA (tu diseño anterior) */
+if(seccion==="experiencia"){
+contenedor.innerHTML = `
+<div class="contenedor-exp">
+
+<div class="menu-exp">
+<button onclick="mostrarDescripcion(1)">Botón 1</button>
+<button onclick="mostrarDescripcion(2)">Botón 2</button>
+<button onclick="mostrarDescripcion(3)">Botón 3</button>
+</div>
+
+<div class="descripcion-exp" id="desc">
+Seleccioná un botón
+</div>
+
+</div>`;
+}
+
+}
+
+/* CAMBIAR DESCRIPCIONES EXPERIENCIA */
+function mostrarDescripcion(num){
+
+const caja = document.getElementById("desc");
+
+if(num===1) caja.innerHTML="Descripción 1";
+if(num===2) caja.innerHTML="Descripción 2";
+if(num===3) caja.innerHTML="Descripción 3";
+
+}
+
 </script>
 
 </body>
