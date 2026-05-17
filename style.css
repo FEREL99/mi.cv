@@ -15,43 +15,44 @@ text-align:center;
 
 .titulo{
 font-size:40px;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
-/* BOTON */
-.boton{
-font-size:20px;
-padding:18px 45px;
-border-radius:12px;
+/* TARJETA BOTON */
+.card{
+width:260px;
+padding:25px;
+border-radius:15px;
 border:2px solid #38bdf8;
-background:transparent;
-color:white;
 cursor:pointer;
-transition:0.3s;
+transition:0.4s;
+overflow:hidden;
+background:#020617;
 }
 
-.boton:hover{
-background:#38bdf8;
-color:#020617;
+/* TEXTO PRINCIPAL */
+.card-titulo{
+font-size:22px;
+font-weight:bold;
 }
 
-/* PANEL OCULTO */
-.panel{
-margin-top:20px;
-max-width:400px;
-padding:20px;
-border-radius:10px;
-background:#0f172a;
-border:1px solid #38bdf8;
-
+/* DESCRIPCION OCULTA */
+.card-descripcion{
+margin-top:15px;
 opacity:0;
 max-height:0;
-overflow:hidden;
-transition:all 0.4s ease;
+transition:0.4s;
+color:#cbd5f5;
 }
 
-/* PANEL ACTIVO */
-.panel.activo{
+/* 🔥 HOVER (MAGIA) */
+.card:hover{
+transform:scale(1.08);
+background:#0f172a;
+box-shadow:0 0 25px #38bdf8;
+}
+
+.card:hover .card-descripcion{
 opacity:1;
 max-height:200px;
 }
