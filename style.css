@@ -5,7 +5,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 background:#020617;
-font-family:Arial, sans-serif;
+font-family:Arial;
 color:white;
 }
 
@@ -15,44 +15,52 @@ text-align:center;
 
 .titulo{
 font-size:40px;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
-/* TARJETA BOTON */
-.card{
-width:260px;
-padding:25px;
-border-radius:15px;
+/* CONTENEDOR */
+.dropdown{
+position:relative;
+display:inline-block;
+}
+
+/* BOTON */
+.boton{
+padding:18px 45px;
 border:2px solid #38bdf8;
+border-radius:12px;
 cursor:pointer;
-transition:0.4s;
-overflow:hidden;
-background:#020617;
+transition:0.3s;
 }
 
-/* TEXTO PRINCIPAL */
-.card-titulo{
-font-size:22px;
-font-weight:bold;
+.boton:hover{
+background:#38bdf8;
+color:#020617;
 }
 
-/* DESCRIPCION OCULTA */
-.card-descripcion{
-margin-top:15px;
-opacity:0;
-max-height:0;
-transition:0.4s;
-color:#cbd5f5;
-}
+/* PANEL DESPLEGABLE */
+.descripcion{
+position:absolute;
+top:100%;
+left:0;
+width:260px;
 
-/* 🔥 HOVER (MAGIA) */
-.card:hover{
-transform:scale(1.08);
 background:#0f172a;
-box-shadow:0 0 25px #38bdf8;
+border:1px solid #38bdf8;
+border-radius:10px;
+padding:20px;
+margin-top:10px;
+
+opacity:0;
+transform:translateY(-10px);
+pointer-events:none;
+
+transition:0.3s;
 }
 
-.card:hover .card-descripcion{
+/* 🔥 HOVER */
+.dropdown:hover .descripcion{
 opacity:1;
-max-height:200px;
+transform:translateY(0);
+pointer-events:auto;
 }
